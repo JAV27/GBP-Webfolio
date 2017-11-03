@@ -1,0 +1,286 @@
+@import 'variables'
+
+#slides
+    display: none
+
+body
+    margin: 0
+    &.modal
+        overflow: hidden
+
+h1
+    margin: 0
+
+div.mainContainer
+    display: flex
+    width: 100%
+
+div.nav
+    width: 100px
+    position: fixed
+    height: 100%
+    background-color: white
+    h1
+        text-align: center
+        margin: 10% 0 0 0
+        font-size: 30px
+        letter-spacing: 4px
+    ul
+        margin-top: 20vh
+        list-style-type: none
+        display: flex
+        flex-direction: column
+        padding: 0
+        align-items: center
+        li
+            margin-bottom: 30px
+            cursor: pointer
+            color: #a6a6a6
+            font-size: 20px
+            &.active, &:hover
+                color: black
+
+div.main
+    width: 100%
+    margin-left: 100px
+    div.hero
+        background-image: url("boston.jpg")
+        background-size: cover
+        background-origin: center
+        height: 100vh
+        padding: 0
+        h1
+            color: white
+            font-size: 70px
+            margin: 0
+            padding: 0
+            text-align: center
+            font-family: $mainFont
+            letter-spacing: 10px
+            &:first-of-type
+                padding-top: 10%
+        .fa-chevron-down
+            color: white
+            font-size: 50px
+            margin-left: 50%
+            margin-top: 50px
+            transform: translateX(-50%)
+            cursor: pointer
+            animation: goUp 500ms ease
+            animation-fill-mode: forwards
+            &:hover
+                animation: goDown 500ms ease
+                animation-fill-mode: forwards
+    div[class^="section-"]
+        height: 500px
+        padding: 10px
+        box-sizing: border-box
+        color: white
+        h1
+            text-align: center
+            margin-top: 40px
+            font-family: $mainFont
+        &.section-prompts
+            background-color: $firstColor
+            div.prompt-navigation
+                display: flex
+                align-items: center
+                justify-content: space-around
+                i
+                    font-size: 30px
+                    margin: 60px
+                    cursor: pointer
+                    opacity: .6
+                    &:hover
+                        opacity: 1
+                div.prompt-container
+                    display: none
+                    flex-direction: column
+                    margin-top: 50px
+                    &.active-prompt
+                        display: flex
+                    h2
+                        font-weight: normal
+                    p
+                        max-width: 600px
+                        font-size: 18px
+                    div.read-more
+                        width: 81px
+                        padding: 5px 10px
+                        background-color: white
+                        cursor: pointer
+                        color: $firstColor
+                        font-size: 18px
+                        font-weight: 400
+                        transition: transform 250ms cubic-bezier(0.51, 1.08, 0.82, 1.01)
+                        &:hover
+                            transform: scale(1.1)
+            div.nav-dots
+                margin-top: 40px
+                display: flex
+                width: 100%
+                justify-content: center
+                div.dot
+                    width: 10px
+                    height: 10px
+                    margin-right: 20px
+                    background-color: black
+                    border-radius: 10px
+                    &.active-dot
+                        background-color: white
+        &.section-gallery
+            background-color: $secondColor
+            height: 600px
+            .bx-wrapper
+                background-color: transparent
+                box-shadow: none
+                border: none
+                margin-left: 50%
+                transform: translateX(-50%)
+                margin-top: 40px
+        &.section-projects
+            background-color: $thirdColor
+            h1
+                color: grey
+                margin-top: 0
+            .term-container
+                display: flex
+                flex-direction: column
+                height: 400px
+                justify-content: space-around
+                align-items: center
+                &.gone
+                    display: none
+                .term
+                    width: 60%
+                    height: 60px
+                    background-color: transparentize(grey, .6)
+                    text-align: center
+                    cursor: pointer
+                    pointer-events: all
+                    &:hover
+                        background-color: $firstColor
+                    &.gone
+                        animation: gone 500ms ease-in-out
+                        animation-fill-mode: forwards
+                        pointer-events: none
+                    &.back
+                        animation: gone 500ms ease-in-out
+                        animation-fill-mode: forwards
+                        animation-direction: reverse
+                    &.gone, &.back
+                        &#two
+                            animation-delay: 250ms
+                        &#three
+                            animation-delay: 500ms
+                        &#four
+                            animation-delay: 750ms
+                    h2
+                        font-size: 30px
+                        margin: 0
+                        margin-top: 15px
+                        letter-spacing: 2px
+                        color: darken($firstColor, 20%)
+        .project-container
+            display: none
+            text-align: center
+            &.gone
+                animation: gone 500ms ease-in-out
+                animation-fill-mode: forwards
+            .project
+                display: none
+                flex-direction: row
+                justify-content: space-around
+                text-align: left
+                p
+                    max-width: 400px
+                    color: $fourthColor
+                    font-size: 20px
+            p.back
+                color: grey
+                cursor: pointer
+                font-size: 20px
+                display: inline
+        &.section-contact
+            background-color: $fourthColor
+            height: 150px
+            h1
+                font-size: 50px
+                letter-spacing: 4px
+
+a
+    text-decoration: none
+
+.more-content
+    display: none
+    width: 100%
+    height: 100%
+    position: fixed
+    z-index: 1
+    background-color: darken($firstColor, 15%)
+    overflow-y: scroll
+    .content-nav
+        display: flex
+        i
+            margin: 20px 20px 0 auto
+            font-size: 40px
+            color: white
+            opacity: .6
+            cursor: pointer
+            &:hover
+                opacity: 1
+    h1
+        color: white
+        text-align: center
+        margin-top: 30px
+        font-family: $mainFont
+    .paragraph-container
+        background-color: white
+        max-width: 60%
+        margin-left: auto
+        margin-right: auto
+        margin-top: 50px
+        padding: 20px 70px
+        box-sizing: border-box
+        p
+            line-height: 33px
+            margin: 0
+
+.navbar
+    display: none
+
+@keyframes goDown
+    0%
+        margin-top: 50px
+    100%
+        margin-top: 65px
+
+@keyframes goUp
+    0%
+        margin-top: 65px
+    100%
+        margin-top: 50px
+
+@keyframes gone
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+
+
+@media (max-width:1060px)
+    div.nav
+        display: none
+    div.main
+        margin-left: 0
+    div.prompt-container p
+        display: none
+    .section-prompts
+        height: 350px !important
+    // .navbar
+    //     display: block
+    //     position: absolute
+    //     color: white
+    //     font-size: 40px
+    //     cursor: pointer
+    //     margin: 20px 0 0 20px

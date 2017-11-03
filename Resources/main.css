@@ -1,0 +1,277 @@
+#slides {
+  display: none; }
+
+body {
+  margin: 0; }
+  body.modal {
+    overflow: hidden; }
+
+h1 {
+  margin: 0; }
+
+div.mainContainer {
+  display: flex;
+  width: 100%; }
+
+div.nav {
+  width: 100px;
+  position: fixed;
+  height: 100%;
+  background-color: white; }
+  div.nav h1 {
+    text-align: center;
+    margin: 10% 0 0 0;
+    font-size: 30px;
+    letter-spacing: 4px; }
+  div.nav ul {
+    margin-top: 20vh;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: center; }
+    div.nav ul li {
+      margin-bottom: 30px;
+      cursor: pointer;
+      color: #a6a6a6;
+      font-size: 20px; }
+      div.nav ul li.active, div.nav ul li:hover {
+        color: black; }
+
+div.main {
+  width: 100%;
+  margin-left: 100px; }
+  div.main div.hero {
+    background-image: url("boston.jpg");
+    background-size: cover;
+    background-origin: center;
+    height: 100vh;
+    padding: 0; }
+    div.main div.hero h1 {
+      color: white;
+      font-size: 70px;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: "Volkorn";
+      letter-spacing: 10px; }
+      div.main div.hero h1:first-of-type {
+        padding-top: 10%; }
+    div.main div.hero .fa-chevron-down {
+      color: white;
+      font-size: 50px;
+      margin-left: 50%;
+      margin-top: 50px;
+      transform: translateX(-50%);
+      cursor: pointer;
+      animation: goUp 500ms ease;
+      animation-fill-mode: forwards; }
+      div.main div.hero .fa-chevron-down:hover {
+        animation: goDown 500ms ease;
+        animation-fill-mode: forwards; }
+  div.main div[class^="section-"] {
+    height: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: white; }
+    div.main div[class^="section-"] h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-family: "Volkorn"; }
+    div.main div[class^="section-"].section-prompts {
+      background-color: #C0B283; }
+      div.main div[class^="section-"].section-prompts div.prompt-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-around; }
+        div.main div[class^="section-"].section-prompts div.prompt-navigation i {
+          font-size: 30px;
+          margin: 60px;
+          cursor: pointer;
+          opacity: 0.6; }
+          div.main div[class^="section-"].section-prompts div.prompt-navigation i:hover {
+            opacity: 1; }
+        div.main div[class^="section-"].section-prompts div.prompt-navigation div.prompt-container {
+          display: none;
+          flex-direction: column;
+          margin-top: 50px; }
+          div.main div[class^="section-"].section-prompts div.prompt-navigation div.prompt-container.active-prompt {
+            display: flex; }
+          div.main div[class^="section-"].section-prompts div.prompt-navigation div.prompt-container h2 {
+            font-weight: normal; }
+          div.main div[class^="section-"].section-prompts div.prompt-navigation div.prompt-container p {
+            max-width: 600px;
+            font-size: 18px; }
+          div.main div[class^="section-"].section-prompts div.prompt-navigation div.prompt-container div.read-more {
+            width: 81px;
+            padding: 5px 10px;
+            background-color: white;
+            cursor: pointer;
+            color: #C0B283;
+            font-size: 18px;
+            font-weight: 400;
+            transition: transform 250ms cubic-bezier(0.51, 1.08, 0.82, 1.01); }
+            div.main div[class^="section-"].section-prompts div.prompt-navigation div.prompt-container div.read-more:hover {
+              transform: scale(1.1); }
+      div.main div[class^="section-"].section-prompts div.nav-dots {
+        margin-top: 40px;
+        display: flex;
+        width: 100%;
+        justify-content: center; }
+        div.main div[class^="section-"].section-prompts div.nav-dots div.dot {
+          width: 10px;
+          height: 10px;
+          margin-right: 20px;
+          background-color: black;
+          border-radius: 10px; }
+          div.main div[class^="section-"].section-prompts div.nav-dots div.dot.active-dot {
+            background-color: white; }
+    div.main div[class^="section-"].section-gallery {
+      background-color: #DCD0C0;
+      height: 600px; }
+      div.main div[class^="section-"].section-gallery .bx-wrapper {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 40px; }
+    div.main div[class^="section-"].section-projects {
+      background-color: #F4F4F4; }
+      div.main div[class^="section-"].section-projects h1 {
+        color: grey;
+        margin-top: 0; }
+      div.main div[class^="section-"].section-projects .term-container {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        justify-content: space-around;
+        align-items: center; }
+        div.main div[class^="section-"].section-projects .term-container.gone {
+          display: none; }
+        div.main div[class^="section-"].section-projects .term-container .term {
+          width: 60%;
+          height: 60px;
+          background-color: rgba(128, 128, 128, 0.4);
+          text-align: center;
+          cursor: pointer;
+          pointer-events: all; }
+          div.main div[class^="section-"].section-projects .term-container .term:hover {
+            background-color: #C0B283; }
+          div.main div[class^="section-"].section-projects .term-container .term.gone {
+            animation: gone 500ms ease-in-out;
+            animation-fill-mode: forwards;
+            pointer-events: none; }
+          div.main div[class^="section-"].section-projects .term-container .term.back {
+            animation: gone 500ms ease-in-out;
+            animation-fill-mode: forwards;
+            animation-direction: reverse; }
+          div.main div[class^="section-"].section-projects .term-container .term.gone#two, div.main div[class^="section-"].section-projects .term-container .term.back#two {
+            animation-delay: 250ms; }
+          div.main div[class^="section-"].section-projects .term-container .term.gone#three, div.main div[class^="section-"].section-projects .term-container .term.back#three {
+            animation-delay: 500ms; }
+          div.main div[class^="section-"].section-projects .term-container .term.gone#four, div.main div[class^="section-"].section-projects .term-container .term.back#four {
+            animation-delay: 750ms; }
+          div.main div[class^="section-"].section-projects .term-container .term h2 {
+            font-size: 30px;
+            margin: 0;
+            margin-top: 15px;
+            letter-spacing: 2px;
+            color: #93824a; }
+    div.main div[class^="section-"] .project-container {
+      display: none;
+      text-align: center; }
+      div.main div[class^="section-"] .project-container.gone {
+        animation: gone 500ms ease-in-out;
+        animation-fill-mode: forwards; }
+      div.main div[class^="section-"] .project-container .project {
+        display: none;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left; }
+        div.main div[class^="section-"] .project-container .project p {
+          max-width: 400px;
+          color: #373737;
+          font-size: 20px; }
+      div.main div[class^="section-"] .project-container p.back {
+        color: grey;
+        cursor: pointer;
+        font-size: 20px;
+        display: inline; }
+    div.main div[class^="section-"].section-contact {
+      background-color: #373737;
+      height: 150px; }
+      div.main div[class^="section-"].section-contact h1 {
+        font-size: 50px;
+        letter-spacing: 4px; }
+
+a {
+  text-decoration: none; }
+
+.more-content {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: #a39153;
+  overflow-y: scroll; }
+  .more-content .content-nav {
+    display: flex; }
+    .more-content .content-nav i {
+      margin: 20px 20px 0 auto;
+      font-size: 40px;
+      color: white;
+      opacity: 0.6;
+      cursor: pointer; }
+      .more-content .content-nav i:hover {
+        opacity: 1; }
+  .more-content h1 {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Volkorn"; }
+  .more-content .paragraph-container {
+    background-color: white;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 20px 70px;
+    box-sizing: border-box; }
+    .more-content .paragraph-container p {
+      line-height: 33px;
+      margin: 0; }
+
+.navbar {
+  display: none; }
+
+@keyframes goDown {
+  0% {
+    margin-top: 50px; }
+  100% {
+    margin-top: 65px; } }
+@keyframes goUp {
+  0% {
+    margin-top: 65px; }
+  100% {
+    margin-top: 50px; } }
+@keyframes gone {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@media (max-width: 1060px) {
+  div.nav {
+    display: none; }
+
+  div.main {
+    margin-left: 0; }
+
+  div.prompt-container p {
+    display: none; }
+
+  .section-prompts {
+    height: 350px !important; } }
+
+/*# sourceMappingURL=main.css.map */
