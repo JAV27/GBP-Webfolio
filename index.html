@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Webfolio</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="Resources/jquery-3.2.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <link rel="stylesheet" href="Resources/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <script type="text/javascript" src="Resources/main.js"></script>
+        <script>
+            $(document).ready(function(){
+              $('.slider').bxSlider();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="mainContainer">
+            <a id="home"></a>
+            <div class="nav">
+                <h1>GBP</h1>
+                <ul>
+                    <a href="#home"><li id="1" class="active">Home</li></a>
+                    <a href="#firstBlock"><li id="2">Prompts</li></a>
+                    <a href="#secondBlock"><li id="3">Gallery</li></a>
+                    <a href="#thirdBlock"><li id="4">Projects</li></a>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="mobile-nav">
+                </div>
+                <div class="hero">
+                    <h1>Josh Viktorov's</h1>
+                    <h1>Webfolio</h1>
+                    <a href="#firstBlock"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                </div>
+                <div class="section-prompts">
+                    <a id="firstBlock"></a>
+                    <h1>Prompts</h1>
+                    <div class="prompt-navigation">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <div class="prompt-container active-prompt">
+                            <h2>Term 1: Reflection--Oral Communication</h2>
+                            <p>Before GBP my oral communications skills weren’t too bad. I was never deathly afraid of presenting in front of crowds yet I still knew my presentation skills could be much improved. Although I wasn’t too bad with presenting I noticed that...</p>
+                            <div class="read-more" id="1">Read More</div>
+                        </div>
+                        <div class="prompt-container">
+                            <h2>Term 1: Reflection--Data Analysis</h2>
+                            <p>Google sheets must have one of the steepest learning curves out of anything I’ve done in school. Whenever I used to open a sheet, the vast sea of cells and settings would overwhelm me and I would have no idea where to start. Even...</p>
+                            <div class="read-more" id="2">Read More</div>
+                        </div>
+                        <div class="prompt-container">
+                            <h2>Term 1: Reflection--Visual Communication</h2>
+                            <p>Coming into GBP, I never really thought about the visual design of my presentations. Sure I picked a theme after a 30 second scan and used that but I never sat down and thought about how the information in my project...</p>
+                            <div class="read-more" id="3">Read More</div>
+                        </div>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="nav-dots">
+                        <div class="dot active-dot" id="1"></div>
+                    </div>
+                </div>
+                <div class="section-gallery">
+                    <a id="secondBlock"></a>
+                    <h1>Gallery</h1>
+                    <div class="bxslider">
+                        <div><img src="Resources/images/bpl.jpg" title="The Boston Public Library" style="height: 400px"></div>
+                        <div><img src="Resources/images/bunny.png" title="Me Riding the Tortoise and the Hare Statue" style="height: 400px"></div>
+                        <div><img src="Resources/images/street.png" title="Boston Marathon Finish Line" style="height: 400px"></div>
+                        <div><img src="Resources/images/bpl2.png" title="The Boston Public Library" style="height: 400px"></div>
+                        <div><img src="Resources/images/garden.jpg" title="The Boston Public Gardens" style="height: 400px"></div>
+                        <div><img src="Resources/images/ducks.jpg" title="Make Way for Ducklings Statue" style="height: 400px"></div>
+                    </div>
+                </div>
+                <div class="section-projects">
+                    <a id="thirdBlock"></a>
+                    <h1>Projects</h1>
+                    <div class="term-container">
+                        <div class="term" id="one"><h2>Term 1</h2></div>
+                        <div class="term" id="two"><h2>Term 2</h2></div>
+                        <div class="term" id="three"><h2>Term 3</h2></div>
+                        <div class="term" id="four"><h2>Term 4</h2></div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project" id="one">
+                            <div class="video">
+                                <iframe src="https://drive.google.com/file/d/0B_OU6f5ddDqeRjV2ZzZWYzk4ajg/preview" width="400" height="225"></iframe>
+                                <p>This is the Community Organization Project. I worked on this with Isaac Bailey. We were assigned an organization in the community and a perosn to interview that was in it. We then used B-roll footage and the interview to create the promotional video shown above. </p>
+                            </div>
+                            <div class="slide">
+                                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQZ84ouSdBS40REoH0lCq7TSNnxIm-Z1aQdJkLsoLO0E7XRICk02vRd0Owtzxvhdty6aT-sZkmhnifI/embed?start=false&loop=true&delayms=3000" frameborder="0" width="361" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                                <p>This is the Agent of Change Project. I worked on this with Will Cooper. In this project we were assigned an important and influential figure in Boston history. We then had to do research on the person and make a presentation on them.</p>
+                            </div>
+                        </div>
+                        <p class="back">Back to Terms</p>
+                    </div>
+                </div>
+                <div class="section-contact">
+                    <h1>jav181@students.needham.k12.ma.us</h1>
+                </div>
+            </div>
+            <div class="more-content">
+                <div class="content-nav">
+                    <i class="fa fa-close" aria-hidden="true"></i>
+                </div>
+                <h1></h1>
+                <div class="paragraph-container">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
