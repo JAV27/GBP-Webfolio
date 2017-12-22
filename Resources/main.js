@@ -118,6 +118,9 @@ $(document).ready(function() {
         } else if(essay == 3) {
             $('.more-content h1').html('Term 1: Reflection--Visual Communication');
             $('.paragraph-container p').html("Coming into GBP, I never really thought about the visual design of my presentations. Sure I picked a theme after a 30 second scan and used that but I never sat down and thought about how the information in my project would be conveyed by an audience and the impact it could have. The main reason is I don’t consider myself an art person or someone who is good with design. While GBP hasn’t increased my skill as an artist obviously, it has given me the resources to make it seem like I do. Through things like slides carousel the ability to create visually appealing presentations has increased dramatically. Also getting direct feedback on every presentation has helped immensely. On every project we do we get a specific grade for our visual communication which allows me to see exactly what mistakes I’m making and rectify them for the next one. Since I struggled with keeping consistent fonts, sizes, and colors, my goal is to try and keep those things consistent throughout a project for the rest of the year.");
+        } else if(essay == 4) {
+            $('.more-content h1').html('Term 2: Reflection--Personal');
+            $('.paragraph-container p').html('Read More');
         }
         $('body').addClass('modal');
     });
